@@ -32,13 +32,13 @@ You can also build/run it yourself. You need the following:
   * OpenCV (opencv-python)
   * NumPy
   * ImageIO
-  * BitString
+  * BitString (Use version 4.1.4, April 2024 released 4.2 and it breaks PCSI)
   * PyLBFGS (includes pre-built [liblbfgs](https://github.com/chokkan/liblbfgs))
   * PySerial
   * Pillow
   * PyInstaller (optional, if you want to build executable files)
   
-These can all be installed using `python3 -m pip install opencv-python numpy imageio bitstring pylbfgs pyserial pillow`
+These can all be installed using `python3 -m pip install opencv-python numpy imageio bitstring=4.1.4 pylbfgs pyserial pillow`
 
 ### Linux and MacOS build instructions
 1. You probably already have python installed. If not, install python version 3 from your distribution (e.g., `apt`), (Python.org), or Anaconda.
