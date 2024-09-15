@@ -30,7 +30,7 @@ Bleeding edge development snapshots are available! These are built continiously,
 You can also build/run it yourself. You need the following:
 * Python 3 and the following Python packages
   * OpenCV (opencv-python)
-  * NumPy
+  * NumPy (Use version 2.0.2, August 2024 released 2.1.2 and it breaks PCSI)
   * ImageIO
   * BitString (Use version 4.1.4, April 2024 released 4.2 and it breaks PCSI)
   * PyLBFGS (includes pre-built [liblbfgs](https://github.com/chokkan/liblbfgs))
@@ -38,7 +38,15 @@ You can also build/run it yourself. You need the following:
   * Pillow
   * PyInstaller (optional, if you want to build executable files)
   
-These can all be installed using `python3 -m pip install opencv-python numpy imageio bitstring=4.1.4 pylbfgs pyserial pillow`
+These can all be installed using `python3 -m pip install opencv-python numpy==2.0.2 imageio bitstring==4.1.4 pylbfgs pyserial pillow`
+
+### KD9YQK Linux Instructions
+1. Clone the repo to home directory
+2. Create a virtual environment. We need to install older packages and dont want them system-wide. ` python -m venv PCSI/`
+3. Enter the PCSI directory and type `source bin/activate` to activate the environment.
+4. install all the required  python modules `python3 -m pip install opencv-python numpy==2.0.2 imageio bitstring==4.1.4 pylbfgs pyserial pillow`
+5. `python pcsiGUI.py` to start. `deactivate` to close the virtual environment and return to shell.
+6. To run without manually running the venv, use `~/PCSI/bin/python ~/PCSI/pcsiGUI.py`
 
 ### Linux and MacOS build instructions
 1. You probably already have python installed. If not, install python version 3 from your distribution (e.g., `apt`), (Python.org), or Anaconda.
